@@ -1,0 +1,129 @@
+/* Navigation demo styles */
+/* --------------------------------------- */
+
+/* responsive-nav.js styles */
+.nav-collapse
+
+	ul
+		display						block
+		list-style					none
+		margin						0
+		padding						0
+		width						100%
+
+	li
+		display						block
+		width						100%
+
+	&.opened
+		max-height					9999px
+
+.js
+
+	.nav-collapse
+		clip						rect(0 0 0 0)
+		display						block
+		max-height					0
+		overflow					hidden
+		position					absolute
+		zoom						1
+
+		@include breakpoint(break-1)
+			max-height				none
+			position				relative
+
+.disable-pointer-events
+	pointer-events					none !important
+
+.nav-toggle
+	-webkit-tap-highlight-color		rgba(black,0)
+	-webkit-touch-callout			none
+	user-select						none
+
+	@include breakpoint(break-1)
+		display						none
+
+/* Demo overrides. Delete if not wanted. */
+.main-nav
+	@include breakpoint(break-1)
+		display						inline-block
+		vertical-align				middle
+		width						calc(100% - 165px)
+
+	.main-nav--list
+		background-color			$linkColour
+		border-top					0.1rem solid $white
+		margin-left					3%
+		text-align					center
+		width						165px
+
+		@include breakpoint(break-1)
+			background-color		transparent
+			border					0
+			margin-left				0
+			text-align				right
+			width					100%
+
+	li
+		font-family					$headingtype[font-family]
+		font-style					normal
+		font-weight					$headingtype[regular]
+		@include					fontsize(16, all)
+
+		a,
+		span
+			border-bottom			0.1rem solid $white
+			color					$white
+			cursor					pointer
+			display					block
+			padding					10px 3%
+			user-select				none
+
+			&:hover,
+			&:active,
+			&:focus
+				background-color	lighten($linkColour,35%)
+				color				$hoverColour
+
+		@include breakpoint(break-1)
+			display					inline-block
+			margin-right			2rem
+			padding-top				7px // Vertical centering
+			width					auto
+
+			a,
+			span
+				color				$white
+				border				0
+				display				inline
+				padding				0
+
+				&:hover,
+				&:active,
+				&:focus
+					background-color transparent
+					color			$linkColour
+
+.js
+
+	.nav-collapse
+		@include breakpoint(break-1)
+			display					inline-block
+			max-height				none
+			position				relative
+
+	.nav-toggle
+		display						block
+		position					absolute
+		right						5%
+		top							20px
+
+		&:after
+			content					"\2630"
+			@include fontsize(30)
+
+		&.active:after
+			content					"\2715"
+
+		@include breakpoint(break-1)
+			display					none

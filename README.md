@@ -1,10 +1,8 @@
-# Sassline
+# Stylusline
 
-Set text on the web to a baseline grid with Sass & rems. [Sassline](http://sassline.com) can be used for blogs, prototyping, and other web projects. It has recommended base typography styling and mixins to work proportionally from the baseline grid. Select a modular-scale for each breakpoint and work responsively type-first.
+Set text on the web to a baseline grid with Stylus & rems. Stylusline can be used for blogs, prototyping, and other web projects. It has recommended base typography styling and mixins to work proportionally from the baseline grid. Select a modular-scale for each breakpoint and work responsively type-first. Forked from [Sassline](http://sassline.com) and translated.
 
-## v2
-
-Version 2 of Sassline has been vastly improved with the use of Sass 3.3 and Sass maps. The mixins are now much more powerful and flexible. Make sure to keep reading to find out how to use the mixins and how they work. Note: as v1.1 pixel fallbacks are not included for rems.
+**Big thanks** to [Jake Giltsoff](https://github.com/designbyjake), the original author of Sassline.
 
 ## Demo
 
@@ -30,33 +28,17 @@ Getting the most out of OpenType features can end up with large typeface files b
 
 Sassline is fully commented with details in the SCSS. Set the font sizes with the font-size mixin, set the spacing using the baseline mixin or set both at once with the sassline mixin. Use rems for everything else. Here are some other key points:
 
-### Compiling Sass
+### Compiling Stylus
 
-Using Sass 3.3.7+ and Sass-Globbing:
+`stylus styles/main.styl`
 
-`sass -r sass-globbing --watch assets/sass:assets/css`
+### Stylus file structure
 
-Alternatively a Mixture simple project settings file is included which will compile the Sass + minify for you (as well as much more). Sassline is also available as a mixture boilerplate [here](https://github.com/designbyjake/sassline-mixture).
+My preferred method is to work along the lines of the SMACSS & BEM method. In the stylus folder there there are two folders — base and modules. The base folder has the Sassline base SCSS partials. Use the modules folder contains some demo SCSS partials with styles you can keep or remove. All new partials added to modules will be compiled into your css so work in here with new files. 
 
-You can also used your preferred methods for compiling sass as long as you have Sass 3.3.7+ and Sass-Globbing enabled.
-
-### Sass file structure
-
-My preferred method is to work along the lines of the SMACSS & BEM method. In the sass folder there there are two folders — base and modules. The base folder has the Sassline base SCSS partials. Use the modules folder contains some demo SCSS partials with styles you can keep or remove. All new partials added to modules will be compiled into your css so work in here with new files. 
-
-### Using Sassline
+### Using Stylusline
 
 Please see [this blog post](http://jakegiltsoff.co.uk/posts/sassline-v2-0).
-
-## Responsive Nav
-
-Viljami Salminen’s [responsive-nav.js](https://github.com/viljamis/responsive-nav.js) plugin is included to provide a mobile ready navigation to work from.
-
-
-## Roadmap
-
-- More complex demos
-- Lightweight Sass grid system
 
 ========
 

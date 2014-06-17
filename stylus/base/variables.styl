@@ -1,0 +1,90 @@
+// SCSS variables
+// ---------------------------------------
+
+// Breakpoint sizes in ems. Add more values here to add more breakpoints.
+// Change names if you prefer, it wont break the mixin as long as they are strings not just numbers.
+// Note: not relative to root font-size.
+$breakpoints = (
+	// 0px       Mobile first
+	break-0 =		0,
+	// 640px   ~ Small tablet up
+	break-1 =		640,
+	// 800px   ~ Large tablet up 
+	break-2 =		800,
+	// 1024px  ~ Desktop up
+	break-3 =		1024,
+	// 1600px  ~ Large desktop up
+	break-4 =		1600
+)
+
+// Root font-sizes for each breakpoint. Set to half desired line-height of body text.
+// ! Make sure to have as many sizes as breakpoints above.
+$rootsizes = (
+	// 24px line-height body text
+	rootsize-0 =	12,
+	// 28px line-height body text
+	rootsize-1 =	14,
+	// 30px line-height body text
+	rootsize-2 =	15,
+	// 34px line-height body text
+	rootsize-3 =	17,
+	// 36px line-height body text
+	rootsize-4 =	18
+)
+
+// Control the line-length with max-width values for the container.
+// Aim for 75–100 characters a line when possible, at smaller sizes type size is more important.
+// ! Make sure to have as many widths as breakpoints above.
+$maxwidths = (
+	// 500px wide
+	maxwidth-0 =	500,
+	// 550px wide
+	maxwidth-1 =	550,
+	// 600px wide
+	maxwidth-2 =	600,
+	// 680px wide
+	maxwidth-3 =	680,
+	// 750px wide
+	maxwidth-4 =	750
+)
+
+// Add typefaces here.
+// Add weight and style details too.
+// Set cap height to set to the baseline.
+$bodytype = (
+	bold =			700,
+	cap-height =	0.66,
+	italic =		italic,
+	font-family =	'Georgia, serif',
+	regular =		400
+)
+
+$headingtype = (
+	bold =			700,
+	cap-height =	0.65,
+	font-family =	'Helvetica, sans-serif',
+	regular =		400
+)
+
+$monospacetype = (
+	cap-height =	0.68,
+	font-family =	'Menlo, monospace',
+	regular =		400
+)
+
+// Here are some cap-height sizes to get you started:
+// Georgia: 0.66, Times / Times New Roman: 0.65, Palatino: 0.52
+// Lucida Grande: 0.72, Helvetica: 0.65, Verdana: 0.76, Tahoma: 0.76
+
+// Text colours. British English.
+$headingColour =	#2E2E2E
+$bodyColour =		#494949
+$linkColour =		#D52836
+$hoverColour =		#494949
+$captionColour =	#7E7E7E
+$white =			#FFFFFF
+
+// Background colours.
+$headBackgroundColour =	#29323A
+$backgroundColour =		#FCFCFC
+$codeBackgroundColour =	#29323A
